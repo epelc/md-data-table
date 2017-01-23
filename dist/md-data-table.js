@@ -2,7 +2,7 @@
  * Angular Material Data Table
  * https://github.com/daniel-nagy/md-data-table
  * @license MIT
- * v0.10.9
+ * v0.10.10
  */
 (function (window, angular, undefined) {
 'use strict';
@@ -30,7 +30,7 @@ angular.module('md-table-pagination.html', []).run(['$templateCache', function($
     '</div>\n' +
     '\n' +
     '<div class="buttons">\n' +
-    '  <div class="label">{{$pagination.min()}} - {{$pagination.max()}} {{$pagination.label.of}} {{$pagination.total}}</div>\n' +
+    '  <div class="label">{{$pagination.min() | number}} - {{$pagination.max() | number}} {{$pagination.label.of}} {{$pagination.total | number}}</div>\n' +
     '\n' +
     '  <md-button class="md-icon-button" type="button" ng-if="$pagination.showBoundaryLinks()" ng-click="$pagination.first()" ng-disabled="$pagination.disabled || !$pagination.hasPrevious()" aria-label="First">\n' +
     '    <md-icon md-svg-icon="navigate-first.svg"></md-icon>\n' +
